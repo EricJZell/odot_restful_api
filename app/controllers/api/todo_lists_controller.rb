@@ -1,7 +1,7 @@
 class Api::TodoListsController < Api::ApiController
 	def index
 		Rails.logger.info "Current user: #{current_user.inspect}"
-    render json: current_user.todo_lists
+    render json: { todo_lists: current_user.todo_lists }
   end
 
 	def show
